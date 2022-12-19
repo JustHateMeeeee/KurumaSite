@@ -319,14 +319,14 @@ main {
 .popupBody h2 {
     text-align: center;
 }
-.popupBody input {
+.popupInput {
     border: 2px solid black;
     margin: 30px;
     margin-left: 20px;
     margin-right: 0;
     margin-bottom: 0;
     min-height: 35px;
-    max-width: 350px;
+    width: 350px;
 }
 .popupBtn {
     justify-items: center;

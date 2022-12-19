@@ -100,18 +100,21 @@ body {
         <p>4</p>
         <p>4</p>
         <p>4</p>
-
-        <!-- модальное окно заявки -->
+                    <!-- модальное окно заявки -->
         <div class="popup" id="popUp">
             <div class="popupContent">
+                <form method="post">
                 <div class="popupBody">
                     <h2>Оставьте заявку</h2>
                     <h4>Наш менеджер свяжется с вами</h4>
                     <h4>в ближайшее время</h4>
-                    <input id="InpName" type="text" placeholder="Ваше имя"/>
-                    <input id="InpNum" type="text" placeholder="Номер телефона или почта"/>
-                    <button class="popupBtn" style="border-radius: 10px 10px 10px 10px" onclick="closeYes()" type="button">Отправить</button>
-                    <a class="close" onclick="closeNo()">X</a>
+                        {% csrf_token %}
+                        {{ form.userName }}
+                        {{ form.contacts }}
+                        <span>{{ error }}</span>
+                        <button class="popupBtn" style="border-radius: 10px 10px 10px 10px" type="submit">Отправить</button>
+                        <a class="close" onclick="closeNo()">X</a>
+                    </form>
                 </div>
              </div>
         </div>
