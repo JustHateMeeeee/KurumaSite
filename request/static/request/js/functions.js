@@ -1,7 +1,6 @@
 //переменные
 let popUp = document.getElementById("popUp")
-let popupClose = document.querySelector(".close")
-let overlay = document.getElementById("overLay")
+let overLay = document.getElementById("overLay")
 let InpName = document.getElementById("InpName")
 let InpNum = document.getElementById("InpNum")
 
@@ -9,13 +8,13 @@ let InpNum = document.getElementById("InpNum")
 function openP() {
     popUp.style.display = "block";
     overLay.style.opacity = ".7";
-    overlay.style.display = "block";
+    overLay.style.display = "block";
 }
 
 /*Функция закрытия без отправки данных*/
 function closeNo() {
     popUp.style.display = "none";
-    overlay.style.display = "none";
+    overLay.style.display = "none";
     InpName.value = "";
     InpNum.value = "";
     InpName.style.border = "2px solid black"
@@ -41,7 +40,7 @@ function closeYes() {
     }
     if ( !(InpName.value == "") && !( InpNum.value == "") ) {
     popUp.style.display = "none";
-    overlay.style.display = "none";
+    overLay.style.display = "none";
     InpName.value = "";
     InpNum.value = "";
     }
@@ -54,7 +53,6 @@ function closeYes() {
  InpNum.onclick = () => {
     InpNum.style.border = "2px solid black"
  }
-
 
 let workBull1 = false;
 let workBull2 = false;
@@ -80,18 +78,17 @@ let workBull5 = false;
    else
       firstOp.style.visibility = "hidden"
 
-   overlay.style.display = "block"
-   overlay.style.opacity = "0"
+   overLay.style.display = "block"
+   overLay.style.opacity = "0"
  }
- overlay.onclick = () => {
+ overLay.onclick = () => {
     firstOp.style.visibility = "hidden"
     secondOp.style.visibility = "hidden"
     firdOp.style.visibility = "hidden"
     fourOp.style.visibility = "hidden"
     fiveOp.style.visibility = "hidden"
-    overlay.style.display = "none"
-    popUp.style.display = "none";
-    overlay.style.display = "none";
+    overLay.style.display = "none"
+    popUp.style.display = "none"
     InpName.value = "";
     InpNum.value = "";
     InpName.style.border = "2px solid black"
@@ -105,8 +102,8 @@ let workBull5 = false;
    else
    secondOp.style.visibility = "hidden"
 
-   overlay.style.display = "block"
-   overlay.style.opacity = "0"
+   overLay.style.display = "block"
+   overLay.style.opacity = "0"
  }
  // действия для иконки 3
  firdStep.onclick = () => {
@@ -116,8 +113,8 @@ let workBull5 = false;
    else
    firdOp.style.visibility = "hidden"
 
-   overlay.style.display = "block"
-   overlay.style.opacity = "0"
+   overLay.style.display = "block"
+   overLay.style.opacity = "0"
  }
  // действие для иконки 4
  fourStep.onclick = () => {
@@ -127,8 +124,8 @@ let workBull5 = false;
    else
     fourOp.style.visibility = "hidden"
 
-   overlay.style.display = "block"
-   overlay.style.opacity = "0"
+   overLay.style.display = "block"
+   overLay.style.opacity = "0"
  }
  fiveStep.onclick = () => {
    workBull5 = !workBull5
@@ -137,6 +134,6 @@ let workBull5 = false;
    else
    fiveOp.style.visibility = "hidden"
 
-    overlay.style.display = "block"
-    overlay.style.opacity = "0"
+    overLay.style.display = "block"
+    overLay.style.opacity = "0"
  }

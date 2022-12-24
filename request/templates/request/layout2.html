@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'request/css/own.css' %}">
+    <link rel="stylesheet" href="{% static 'request/css/articles.css' %}">
+    <link rel="stylesheet" href="{% static 'request/css/error.css' %}">
+    <title>Document</title>
+</head>
+<body>
+<style>
+
+</style>
+    <header>
+        <!--Меню навигации сайта-->
+     <nav class="head">
+                <!--Логотип компании-->
+                <a href="own">
+                    <img src="{% static 'request/img/mainLogo.jpg' %}" height="90px" width="200px" class="imgH">
+                </a>
+                <!--Основное меню-->
+                <div class="menu1">
+                    <a href="own" class="company"><p>О компании</p></a>
+                    <div class="dropMenu1">
+                        <a href="#">Автомобили из южной Кореи</a>
+                        <a href="#">Авто под полную пошлину из Японии</a>
+                        <a href="#">Новые автомобили</a>
+                        <a href="#">Битые автомобили</a>
+                        <a href="#">Автоподбор на ДВ</a>
+                        <a href="#">Грузовики и спец техника</a>
+                    </div>
+                </div>
+                <div class="menu2">
+                    <a href="error" class="katalog"><p>Каталог</p></a>
+                </div>
+                <div class="menu1">
+                    <a href="error" class="online"><p>Сервисы</p></a>
+                    <div class="dropMenu1">
+                        <a href="error">Калькулятор цены</a>
+                        <a href="error">Онлайн Аукцион</a>
+                    </div>
+                </div>
+                <div class="menu3">
+                    <a class="statii" href="articles"><p>Статьи</p></a>
+                </div>
+                <div class="menu4">
+                    <a class="otz"><p>Отзывы</p></a>
+                </div>
+                <div class="menu5">
+                    <a href="error" class="kont"><p>Контакты</p></a>
+                </div>
+                <!--Ссылки на соц. сети-->
+                <div class="icons">
+                    <a href="#" class="vkIcon"><img src="{% static 'request/img/vkLogo2.png' %}" width="40px" height="40px"></a>
+                    <a href="#" class="tgIcon"><img src="{% static 'request/img/tgLogo2.png' %}" width="40px" height="40px"></a>
+                </div>
+                <!--Номер телефона + текст-->
+                <div class="number">
+                    <h4 class="num">8 800 555 55 35</h4>
+                    <h4 class="txt">Звонок по РФ</h4>
+                </div>
+            </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock%}
+    </main>
+    <footer>
+                <div class="footerImg">
+            <img src="{% static 'request/img/mainLogo.jpg' %}" height="90px" width="200px" class="imgH">
+         <p class="kurumaC">©2022 KURUMA | Из Японии в Росию</p>
+        </div>
+        <div class="footerText">
+        <p1 class="thanksM">Спасибо что выбрали именно нас!</p1>
+        <p2 class="contData">Контактные данные:</p2>
+        <p3 class="firstNum">8 800 555 55 35</p3>
+        <p4 class="secondNum">8 800 555 55 35</p4>
+        </div>
+        <div class="icons">
+            <a href="#" class="vkIcon"><img src="{% static 'request/img/vkLogo2.png' %}" width="40px" height="40px"></a>
+            <a href="#" class="tgIcon"><img src="{% static 'request/img/tgLogo2.png' %}" width="40px" height="40px"></a>
+        </div>
+    </footer>
+    <script src="{% static 'request/js/functions.js' %}"></script>
+</body>
+</html>
