@@ -33,13 +33,13 @@
                     </div>
                 </div>
                 <div class="menu2">
-                    <a class="katalog"><p>Каталог</p></a>
+                    <a href="error" class="katalog"><p>Каталог</p></a>
                 </div>
                 <div class="menu1">
-                    <a class="online"><p>Сервисы</p></a>
+                    <a href="error" class="online"><p>Сервисы</p></a>
                     <div class="dropMenu1">
-                        <a href="#">Калькулятор цены</a>
-                        <a href="#">Онлайн Аукцион</a>
+                        <a href="error">Калькулятор цены</a>
+                        <a href="error">Онлайн Аукцион</a>
                     </div>
                 </div>
                 <div class="menu3">
@@ -49,7 +49,7 @@
                     <a class="otz"><p>Отзывы</p></a>
                 </div>
                 <div class="menu5">
-                    <a class="kont"><p>Контакты</p></a>
+                    <a href="error" class="kont"><p>Контакты</p></a>
                 </div>
                 <!--Ссылки на соц. сети-->
                 <div class="icons">
@@ -74,9 +74,22 @@
 
     </main>
     <footer>
+        <div class="footerImg">
+            <img src="{% static 'request/img/mainLogo.jpg' %}" height="90px" width="200px" class="imgH">
+         <p class="kurumaC">©2022 KURUMA | Из Японии в Росию</p>
+        </div>
+        <div class="footerText">
+        <p1 class="thanksM">Спасибо что выбрали именно нас!</p1>
+        <p2 class="contData">Контактные данные:</p2>
+        <p3 class="firstNum">8 800 555 55 35</p3>
+        <p4 class="secondNum">8 800 555 55 35</p4>
+        </div>
+        <div class="icons">
+            <a href="#" class="vkIcon"><img src="{% static 'request/img/vkLogo2.png' %}" width="40px" height="40px"></a>
+            <a href="#" class="tgIcon"><img src="{% static 'request/img/tgLogo2.png' %}" width="40px" height="40px"></a>
+        </div>
     </footer>
-    <div class="overlay" id="overLay"></div>
-    <script src="{% static 'request/js/functions.js' %}"></script>
-    <script src="{% static 'request/js/ownSteps.js' %}"></script>
+    <div class="overLay" id="overLay"></div>
 </body>
+    <script src="{% static 'request/js/functions.js' %}"></script>
 </html>

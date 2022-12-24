@@ -26,3 +26,6 @@ def articles(request):
 
 def whereBuy(request):
     return render(request, 'request/whereBuy.html')
+
+def error(request):
+    return render(request, 'request/error.html')

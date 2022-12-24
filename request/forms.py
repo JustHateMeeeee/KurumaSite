@@ -10,10 +10,12 @@ class requestForm(ModelForm):
         widgets = {
             "userName": TextInput(attrs={
                 'class': 'popupInput',
-                'placeholder': 'Введите имя'
+                'placeholder': 'Введите имя',
+                'id': 'InpName'
             }),
             "contacts": TextInput(attrs={
                 'class': 'popupInput',
-                'placeholder': 'Введите телефон или почту'
+                'placeholder': 'Введите телефон или почту',
+                'id': 'InpNum'
             })
         }
