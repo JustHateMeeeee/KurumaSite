@@ -29,3 +29,18 @@ def whereBuy(request):
 
 def error(request):
     return render(request, 'request/error.html')
+
+def Transmission(request):
+    return render(request, 'request/Transmission.html')
+
+def Features(request):
+    return render(request, 'request/Features.html')
+
+def kayCars(request):
+    return render(request, 'request/kayCars.html')
+
+def sailtHonda(request):
+    return render(request, 'request/sailtHonda.html')
+
+def variator(request):
+    return render(request, 'request/variator.html')
