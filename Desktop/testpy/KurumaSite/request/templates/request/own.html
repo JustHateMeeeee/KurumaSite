@@ -1,0 +1,117 @@
+{% extends 'request/layout.html' %}
+{% load static %}
+{% block content%}
+<body>
+<style>
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url("{% static 'request/img/fonTest.png' %}");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top;
+}
+</style>
+<main>
+        <!-- Первая линия сайта, японские автомобили-->
+        <div class="carBox">
+        <div class="text1">
+            <h1>Автомобили с аукционов Японии</h1>
+            <h4>Подберем под Ваш бюджет от 500 000 рублей, привезем</h4>
+            <h4>во Владивосток, растаможим, оформим</h4>
+            <h4>документы и доставим до Вас</h4>
+        </div>
+        <div>
+            <img src="{% static 'request/img/car1.png' %}" class="imgL1">
+        </div>
+            <div>
+                <img src="{% static 'request/img/car2.png' %}" width="672" height="504" class="imgL2">
+            </div>
+            <h1 class="Text2">Автомобили из южной кореи</h1>
+            <h4 class="text2">На 20% дешевле средней цены в России</h4>
+        </div>
+        <div class="workText">
+            <div class="leftBord"></div>
+            <h1>Схема работы</h1>
+            <div class="rightBord"></div>
+        </div>
+        <div class="borderLine"></div>
+        <div class="workIcon">
+            <div class="contentIcon" id="icon1">1</div>
+            <div class="contentIcon" id="icon2">2</div>
+            <div class="contentIcon" id="icon3">3</div>
+            <div class="contentIcon" id="icon4">4</div>
+            <div class="contentIcon" id="icon5">5</div>
+        </div>
+        <div class="afterStepBox">
+        <div class="opBox" id="firstOp">
+            <h1>ОБРАЩЕНИЕ</h1>
+            <h3>Оставляете заявку на просчет стоимостиили</h3>
+            <h3>и подбор авто под Ваш бюджет</h3>
+        </div>
+        <div class="opBox" id="secondOp">
+            <h1>Договор</h1>
+            <h4>В договоре прописываем</h4>
+            <h4>все Ваши пожелания по авто,</h4>
+            <h4>бюжет и нашу ответственность</h4>
+        </div>
+        <div class="opBox" id="firdOp">
+            <h1>Поиск</h1>
+            <h4>Мы ищем авто под Ваши требования и бюджет,</h4>
+            <h4>проверяем его и переводим аукционный лист</h4>
+            <h4>и после согласовываем его с Вами</h4>
+        </div>
+        <div class="opBox" id="fourOp">
+            <h1>Транспортировка</h1>
+            <h4>Транспортируем Ваш авто в Россию,</h4>
+            <h4>растамаживаем и размещаем на стоянке</h4>
+            <h4>до получения документов</h4>
+        </div>
+        <div class="opBox" id="fiveOp">
+            <h1>Доставка</h1>
+            <h4>Отправляем авто</h4>
+            <h4>в Ваш населенный пункт</h4>
+            <h4>автовозом или по Ж/Д</h4>
+        </div>
+        </div>
+        <div class="workText">
+            <div class="leftBord"></div>
+            <h1>Менеджеры</h1>
+            <div class="rightBord"></div>
+        </div>
+        <!--Слайдер-->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="{% static 'request/img/manager1.jpg' %}" width="220px" height="320px"></div>
+                <div class="swiper-slide"><img src="{% static 'request/img/manager2.jpg' %}" width="220px" height="320px"></div>
+                <div class="swiper-slide"><img src="{% static 'request/img/manager3.jpg' %}"width="260px" height="320px"></div>
+            </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>            
+        </div>
+        <!--Конец слайдера-->
+
+                    <!-- модальное окно заявки -->
+        <div class="popup" id="popUp">
+            <div class="popupContent">
+                <form method="post">
+                <div class="popupBody">
+                    <h2>Оставьте заявку</h2>
+                    <h4>Наш менеджер свяжется с вами</h4>
+                    <h4>в ближайшее время</h4>
+                        {% csrf_token %}
+                        {{ form.userName }}
+                        {{ form.contacts }}
+                        <span>{{ error }}</span>
+                        <button class="popupBtn" style="border-radius: 10px 10px 10px 10px" type="submit">Отправить</button>
+                        <a class="close" id="close" onclick="closeNo()">X</a>
+                    </form>
+                </div>
+             </div>
+        </div>
+</main>
+</body>
+{% endblock %}

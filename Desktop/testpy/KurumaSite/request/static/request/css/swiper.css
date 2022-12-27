@@ -1,0 +1,19 @@
+.swiper{
+    margin-bottom: 200px;
+    width: 50%;
+}
+.swiper-slide{
+    display: flex;
+    justify-content: center;
+  }
+
+.swiper-button-next{
+    color: red !important;
+}
+.swiper-button-prev{
+    color: red !important;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: red;
+  }

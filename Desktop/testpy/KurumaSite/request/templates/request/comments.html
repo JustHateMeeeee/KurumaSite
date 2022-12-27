@@ -1,0 +1,13 @@
+{% extends 'request/layout2.html' %}
+{% load static %}
+{% block content%}
+        <div class="commentsText1">
+            <h1>В этом разделе представлены отзывы реальных покупателей которые выбрали команду Kuruma</h1>
+        </div>
+        {% for el in commOutput %}
+            <div class="commentBlock">
+                <h2>{{ el.commName }}</h2>
+                <p>{{ el.commText }}</p>
+            </div>
+        {% endfor %}
+{% endblock %}

@@ -1,0 +1,548 @@
+/* Общие значения страницы */
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url({% static 'request/img/fonTest.png' %});
+    background-color: grey;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top;
+}
+/* Стили для шапки сайта*/
+.head {
+    margin-top: 0;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    position: fixed;
+    justify-content: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+    height: 95px;
+    width:100%;
+    background-color: white;
+    z-index: 110;
+}
+.head a {
+    text-decoration: none;
+}
+/*Просто костыль для отображение мейна после fixed шапки*/
+main {
+    margin-top: 95px;
+}
+/*Блок меню "О компании"*/
+.company {
+    display: block;
+    height: 95px;
+    width: 150px;
+    font-weight: 500;
+    color: black;
+    margin: 0;
+    box-shadow: 0px -2px 0px rgba(255, 0, 0, .5) inset;
+}
+.company p {
+    font-size: 18px;
+    font-weight: 900;
+    text-align: center;
+    line-height: 90px;
+    margin: 0;
+}
+.menu1 {
+    cursor: pointer;
+    display: inline-block;
+}
+.dropMenu1 {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropMenu1 a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropMenu1 a:hover { color: red ;
+}
+.menu1:hover .dropMenu1 {display: block;
+}
+.menu1:hover .company {box-shadow: 0px -4px 0px rgba(255, 0, 0, 1) inset;
+}
+@media (min-width: 1280px) and (max-width: 1440px) {
+    .company {
+        display: block;
+        height: 95px;
+        width: 100px;
+        font-weight: 500;
+        color: black;
+        margin: 0;
+        box-shadow: 0px -2px 0px rgba(255, 0, 0, .5) inset;
+    }
+}
+
+/*Блок меню "Каталог"*/
+.katalog {
+    display: block;
+    height: 95px;
+    width: 150px;
+    font-weight: 500;
+    color: black;
+    margin: 0;
+    box-shadow: 0px -2px 0px rgba(255, 0, 0, .5) inset;
+}
+.katalog p {
+    font-size: 18px;
+    font-weight: 900;
+    text-align: center;
+    line-height: 90px;
+    margin: 0
+}
+.menu2:hover .katalog {box-shadow: 0px -4px 0px rgba(255, 0, 0, .7) inset;
+}
+.menu2 {
+    cursor: pointer;
+    display: inline-block;
+}
+@media (min-width: 1280px) and (max-width: 1440px) {
+    .katalog {
+        display: block;
+        height: 95px;
+        width: 100px;
+        font-weight: 500;
+        color: black;
+        margin: 0;
+        box-shadow: 0px -2px 0px rgba(255, 0, 0, .5) inset;
+    }
+}
+/*Блок меню "Онлайн-сервисы"*/
+.online {
+    display: block;
+    height: 95px;
+    width: 150px;
+    font-weight: 500;
+    color: black;
+    margin: 0;
+    box-shadow: 0px -2px 0px rgba(255, 0, 0, .5) inset;
+}
+.online p {
+    font-size: 18px;
+    font-weight: 900;
+    text-align: center;
+    line-height: 90px;
+    margin: 0
+}
+.menu1:hover .online {box-shadow: 0px -4px 0px rgba(255, 0, 0, .7) inset;
+}
+@media (min-width: 1280px) and (max-width: 1440px) {
+    .online {
+        display: block;
+        height: 95px;
+        width: 100px;
+        font-weight: 500;
+        color: black;
+        margin: 0;
+        box-shadow: 0px -2px 0px rgba(255, 0, 0, .5) inset;
+    }
+}
+/*Блок меню "Статьи"*/
+.statii {
+    display: block;
+    height: 95px;
+    width: 150px;
+    font-weight: 500;
+    color: black;
+    margin: 0;
+    box-shadow: 0px -2px 0px rgba(255, 0, 0, .5) inset;
+}
+.statii p {
+    font-size: 18px;
+    font-weight: 900;
+    text-align: center;
+    line-height: 90px;
+    margin: 0
+}
+.menu3 {
+    cursor: pointer;
+    display: inline-block;
+}
+.menu3:hover .statii {box-shadow: 0px -4px 0px rgba(255, 0, 0, .7) inset;
+}
+@media (min-width: 1280px) and (max-width: 1440px) {
+    .statii {
+        display: block;
+        height: 95px;
+        width: 100px;
+        font-weight: 500;
+        color: black;
+        margin: 0;
+        box-shadow: 0px -2px 0px rgba(255, 0, 0, .5) inset;
+    }
+}
+/*Блок меню "Отзывы"*/
+.otz {
+    display: block;
+    height: 95px;
+    width: 150px;
+    font-weight: 500;
+    color: black;
+    margin: 0;
+    box-shadow: 0px -2px 0px rgba(255, 0, 0, .5) inset;
+}
+.otz p {
+    font-size: 18px;
+    font-weight: 900;
+    text-align: center;
+    line-height: 90px;
+    margin: 0
+}
+.menu4:hover .otz {box-shadow: 0px -4px 0px rgba(255, 0, 0, .7) inset;
+}
+.menu4 {
+    cursor: pointer;
+    display: inline-block;
+}
+@media (min-width: 1280px) and (max-width: 1440px) {
+    .otz {
+        display: block;
+        height: 95px;
+        width: 100px;
+        font-weight: 500;
+        color: black;
+        margin: 0;
+        box-shadow: 0px -2px 0px rgba(255, 0, 0, .5) inset;
+    }
+}
+
+/*Блок меню "Контакты*/
+.kont {
+    display: block;
+    height: 95px;
+    width: 150px;
+    font-weight: 500;
+    color: black;
+    margin: 0;
+    box-shadow: 0px -2px 0px rgba(255, 0, 0, .5) inset;
+}
+.kont p {
+    font-size: 18px;
+    font-weight: 900;
+    text-align: center;
+    line-height: 90px;
+    margin: 0
+}
+.menu5:hover .kont {box-shadow: 0px -4px 0px rgba(255, 0, 0, .7) inset;
+}
+.menu4 {
+    cursor: pointer;
+    display: inline-block;
+}
+@media (min-width: 1280px) and (max-width: 1440px) {
+    .kont {
+        display: block;
+        height: 95px;
+        width: 100px;
+        font-weight: 500;
+        color: black;
+        margin: 0;
+        box-shadow: 0px -2px 0px rgba(255, 0, 0, .5) inset;
+    }
+}
+/*Ссылки на соц. сети*/
+.icons {
+    align-items: center;
+    margin-left: 50px;
+    display: flex;
+}
+.icons a {
+    margin-right:30px;
+}
+/*Телефон + текст*/
+.number .num {
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+.number .txt {
+    display: block;
+    text-align: center;
+    margin-top: 0;
+}
+/*Основная кнопка для заявки*/
+.hbut {
+    border: red;
+    background-color: #D30000;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    margin-left: 50px;
+    align-self: center;
+    width: 200px;
+    height: 50px;
+    transition: all .15s ease-in-out;
+}
+.hbut:hover {
+    cursor: pointer;
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    transition: all .15s ease-in-out;
+}
+/*Основное модальное окно заявки*/
+.popup {
+    z-index: 100;
+    position: fixed;
+    padding-left: 0;
+    border-radius: 20px;
+    background-color: white;
+    height: 400px;
+    display: none;
+    width: 400px;
+    top: 300px;
+    margin-left: 700px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .4);
+
+}
+.popupBody {
+    display: flex;
+    flex-direction: column;
+}
+.popupBody h4 {
+    margin-bottom: 0;
+    text-align: center;
+}
+.popupBody h2 {
+    text-align: center;
+}
+.popupInput {
+    border: 2px solid black;
+    margin: 30px;
+    margin-left: 20px;
+    margin-right: 0;
+    margin-bottom: 0;
+    min-height: 35px;
+    width: 350px;
+}
+.popupBtn {
+    justify-items: center;
+    border: red;
+    background-color: #D30000;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    align-self: center;
+    margin-top: 25px;
+    width: 200px;
+    height: 50px;
+    transition: all .15s ease-in-out;
+}
+.popupBtn:hover {
+    cursor: pointer;
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    transition: all .15s ease-in-out;
+}
+/*Второстепенные функции модельного окна*/
+.overLay {
+    z-index: 99;
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: black;
+    opacity: .7;
+}
+.close {
+    cursor: pointer;
+    left: 92%;
+    top: 3%;
+    position: absolute;
+}
+/*Первая линия сайта, японские машины*/
+.carBox {
+    position: relative;
+    width: 100%;
+    height: 900px;
+}
+.text1 {
+    font-size: 24px;
+    color: white;
+}
+.text1 h1 {
+    position: absolute;
+    left: 18%;
+    top: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.text1 h4 {
+    position: absolute;
+    font-weight: 700;
+    font-size: 22px;
+    top: 90px;
+    left: 18%;
+}
+.text1 h4:nth-child(3) {
+    position: absolute;
+    top: 130px;
+}
+.text1 h4:nth-child(4) {
+    position: absolute;
+    top: 170px;
+}
+.imgL1 {
+    position: absolute;
+    left:50%;
+    top: 13%;
+}
+.imgL2 {
+    position: absolute;
+    top: 42%;
+    left: 13%;
+}
+.Text2 {
+    position: absolute;
+    top: 51%;
+    left: 51%;
+    font-size: 44px;
+    color: white;
+}
+.text2 {
+    color: white;
+    font-size: 22px;
+    position: absolute;
+    top: 64%;
+    left: 56%;
+}
+.workText {
+    display: flex;
+    height: auto;
+    width: 100%;
+}
+.leftBord {
+    margin-top: 42px;
+    margin-left: 15%;
+    width: 30%;
+    height: 1px;
+    border-top: 5px solid red;
+}
+.workText h1 {
+    color: rgba(255, 0, 0, 1);
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.rightBord {
+    margin-top: 42px;
+    width: 30%;
+    height: 1px;
+    border-top: 5px solid red;
+}
+.workIcon {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+.contentIcon {
+    font-family:DejaVu Sans Mono, monospace;
+    border: 5px solid red;
+    font-size: 42px;
+    border-radius: 100px;
+    background-color: none;
+    color: white;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    z-index: 100;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+.contentIcon:hover {
+    cursor: pointer;
+    font-family:DejaVu Sans Mono, monospace;
+    border: 7px solid red;
+    font-size: 42px;
+    border-radius: 100px;
+    background-color: none;
+    color: white;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.afterStepBox {
+    display: flex;
+    justify-content: space-around;
+}
+#firdOp h1 {
+    margin-top: 0;
+}
+.opBox {
+    position: inherit;
+    padding: 10px;
+    width: 300px;
+    height: 200px;
+    background-color: white;
+    border-radius: 15px;
+    text-align: center;
+    visibility: hidden;
+    opacity: .9;
+    z-index: 100;
+}
+footer{
+    border-top: 5px solid black;
+    padding-top: 40px;
+    padding-left: 20px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+}
+.imgH1{
+    color: black;
+}
+.footerText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.kurumaC{
+    color: black;
+}
+
+.thanksM{
+    font-size: 25px;
+    font-weight: 530;
+    color: black;
+}
+
+.contData{
+    font-size: 18px;
+    font-weight: 530;
+    color: black;
+}
+
+.firstNum{
+    font-size: 18px;
+    font-weight: 530;
+    color: black;
+}
+
+.secondNum{
+    font-size: 18px;
+    font-weight: 530;
+    color: black;
+}
